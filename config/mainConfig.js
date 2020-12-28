@@ -3,7 +3,7 @@ var today = new Date();
 var h = today.getHours();
 var m = today.getMinutes();
 var elementAmount, counter;
-if(h <= 6 || h >= 12)/*|| h >= 18*/
+if(h <= 6 || h >= 18)/*|| h >= 18*/
 {
     document.body.classList.add("nightMode");
     document.getElementById('paraSky').src = 'media/night/nightSky.png';
