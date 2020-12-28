@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Home - SVR</title>
-        <meta charset="utf-8">
-        <meta name="1024" content="SVR">
-        <!-- e x t e r n a l   c s s -->
-        <link rel="stylesheet" type="text/css" href="config/styles.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCNO - home</title>
+    <link rel="stylesheet" href="config/styles.css">    <!--links to the rest of the styles-->
+</head>
+<body id="mainFrame">   <!--when the site loads, it calls the function to show preloader-->
+
+    <!--main body-->
+    <div id="bodyContent">
         <!--NORMAL NAV BAR-->
         <nav id="navBar">
             <img class="smallimg" src="media/SVR-logo.png">
             <a href="gallery.html">Gallery</a>
-            <a href="other.html">other</a>
             <a href="history.html">History</a>
             <a href="cattle.html">Cattles</a>
             <a href="" class="activeTab">Home</a>
@@ -20,19 +21,6 @@
                 <img id="hiddenMenu" src="media/light-more.png">
             </a>          
         </nav>
-        <!-- PHONE SIZE NAV -->
-        <div id="fullNav" class="overlay">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><!--close button-->
-            <div class="overlay-content">
-                <img class="smallimg" src="media/SVR-logo.png" width="100">
-                <a href="" class="activeTab">Home</a> 
-                <a href="cattle.html">Cattles</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="other.html">other</a>
-                <a href="history.html">History</a>
-            </div>
-        </div>
-        
         <!--PARALLAX AREA-->
         <div class="paral" id="prllx">
             <img src="media/clearSky.jpg" id="paraSky">
@@ -120,6 +108,20 @@
                 <p>~~1024 Design~~</p>
             </footer>
         </div>
-    </body>
-    <script src="config/mainConfig.js"></script>
+    </div>
+
+    <!-- PHONE SIZE NAV -->
+    <div id="fullNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><!--close button-->
+        <div class="overlay-content">
+            <img class="smallimg" src="media/SVR-logo.png" width="100">
+            <a href="" class="activeTab">Home</a> 
+            <a href="cattle.html">Cattles</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="history.html">History</a>
+        </div>
+    </div>
+</body>
+<!-- JAVASCRIPT -->
+<script src="config/mainConfig.js"></script>
 </html>
