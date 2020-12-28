@@ -1,0 +1,31 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    clip-path: polygon(0% 0%, 0% 100%, 40% 100%, 50% 30%, 100% 30%, 100% 0%);
+    height: 50vh;
+    width: 100%;
+    background-image: url(../media/cattleBackDrop.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.workInProgress{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80vh;
+    margin-top: 20vh;
+    text-align: center;
+    background-image: linear-gradient(white 10%, #9ef5fd 25%, #00A1AF 60%);
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+
+.workInProgress label{
+    font-weight: normal;
+}
