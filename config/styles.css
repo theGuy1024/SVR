@@ -1,0 +1,481 @@
+*{
+	margin:         0;
+    padding:        0;
+    font-family:    sans-serif;
+}
+
+body{
+    width:      100%;
+}
+
+nav{
+    position:       relative;
+    z-index:        99;
+    left:           0;width:          100%;height:         10vh;margin-top:     3vh; background-color: rgba(0, 0, 0, 0.1);transition:     0.5s;
+}
+
+nav img{
+    position:       relative;
+    top:            1%;
+    left:           2%;
+    width:          10vh;
+}
+
+nav a{
+    font-weight:        bold;
+    font-family: 		sans-serif;
+	color:            black;
+    float:              right;
+    text-decoration:    none;
+    font-size:          1.2em;
+    letter-spacing:     3px;
+    margin:             1% 3% 0 0;
+    padding:            0 1% 1% 1%;
+    transition:         0.38s;
+    border-bottom:      1px solid black;
+}
+
+nav a:hover{
+    color:              white;
+    border-bottom:      3px solid white;
+    padding-bottom: 	1%;
+}
+
+.activeTab{
+    color:              #947A38;
+    font-weight:        bold;
+    font-size:          1.5em;
+    border-bottom:      3px solid #947A38;
+}
+
+/*STICKY NAV*/
+.sticky {
+	position: 			fixed;
+	top: 				0;
+	width: 				100%;
+    border-bottom: 		1px solid black;
+    border-top: 		1px solid black;
+	background-color: 	rgba(255, 255, 255, 0.8);
+}
+
+.sticky + .content {
+	padding-top: 		60px;
+}
+
+/*MOBILE NAV*/
+.icon{
+	display: 			none;
+}
+
+.overlay {
+    height: 		    100%;
+    width: 				0;
+    position: 			fixed;
+    z-index: 		    100;
+    top: 			    0;
+    left: 				0;
+    background-color: 	rgba(0,0,0, 0.9);
+    overflow-x: 	    hidden;
+    transition: 	    0.5s;
+  }
+  
+  .overlay-content {
+    position: 			relative;
+    top: 			    15%;
+    width: 				100%;
+    text-align: 	    center;
+    margin-top: 	    30px;
+  }
+  
+  .overlay a {
+    padding: 		    8px;
+    text-decoration: 	none;
+    font-size: 			36px;
+    color: 				#818181;
+    display: 		    block;
+    transition: 	    0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: 				#947A38;
+  }
+  
+  .overlay .closebtn {
+    position: 			absolute;
+    top: 			    20px;
+    right: 				45px;
+    font-size: 			60px;
+    width:				5vh;
+    height:				5vh;
+  }
+
+  /*active tab*/
+  .overlay a.activeTab{
+    color:              #947A38;
+    font-weight:        bold;
+    border-bottom:      3px solid #947A38;
+    letter-spacing:     5px;
+}
+
+.paral{
+    position:       absolute;
+    top:            0;
+    left:           0;
+    z-index:        -1;
+    height:         100vh;
+    width:          100%;
+    clip-path:      polygon(0% 0%, 0% 94%, 50% 100%, 100% 94%, 100% 0%);
+    overflow:       hidden;
+}
+
+#paraSky, #paraField, #paraCloudsR, #paraCloudsL{
+    position: 			absolute;
+	top: 				0;
+    left: 				0;
+    object-fit: 		cover;
+    pointer-events: 	none;
+}
+
+#paraSky, #paraField{
+	width: 				100%;
+	height: 			100%;
+	transition: 		opacity 2s ease-in-out;
+}
+
+#paraCloudsR, #paraCloudsL{
+    width: 				50%;
+    height: 			100%;
+}
+
+#paraSky{
+    z-index: 1;
+}
+
+#paraCloudsR{
+    animation:          rightCloudAnimation 120s infinite;
+    animation-timing-function: linear;
+    z-index:            2;
+}
+
+#paraCloudsL{
+    animation:          leftCloudAnimation 220s infinite;
+    animation-timing-function: linear;
+    z-index:            3;
+}
+
+#SVRspacing{
+    position:           relative;
+    top:                0;
+    height:             25vh;
+    z-index:            4;
+}
+
+#SVRTitle{
+    position:           relative;
+    left:               20%;
+    z-index:            4;
+    font-size:			6em;
+	letter-spacing:		7px;
+    font-weight:		bold;
+    width:              100%;
+}
+
+#SVRTitle svg:nth-child(4){
+    transform:          translateX(60%);
+}
+
+#paraField{
+    z-index:            5;
+}
+
+#aboutUs{
+    margin-top:         105vh;
+    padding-bottom:     10vh;
+    width:              99%;
+    font-size:          1.25em;
+}
+
+#aboutUs h3, #shareUs h3{
+    padding-bottom:     1%;
+    font-size:          2.2em;
+    text-align:         center;
+    letter-spacing:     4px;
+    border-bottom:      1px solid #0cad93;
+}
+
+
+#shareUs{
+    padding:            5vh 0 20vh 0;
+    width:              100%;
+    font-size:          1.25em;
+}
+
+.shareBackground{
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+#shareUs .halfDiv p{
+    margin-bottom:      90px;
+    text-align:         center;
+    overflow:           hidden;
+}
+
+.seventy{
+    width:              69%;
+    display:            inline-block;
+}
+
+.seventy p, #shareUs p{
+    text-align:         justify;
+    padding:            1% 8%;
+}
+
+p span{
+    color:              #531F01;
+    font-weight:        bold;
+    font-size:          1.75em;
+    letter-spacing:     3px;
+}
+
+.thirty{
+    width:              29%;
+    display:            inline-block;
+}
+
+.thirty img{
+    margin-top:         5%;
+    width:              300px;
+    height:             300px;
+    border-radius:      50%;
+}
+
+.halfDiv{
+    width:              49%;
+    display:            inline-block;
+}
+
+#shareUs img{
+    width:              40%;
+    padding-left:       20%;
+    overflow:           hidden;
+}
+
+#Footer{
+    width:          100%;
+    height:         42vh;
+    border-top:     1px solid white;
+}
+
+.footerBackground{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.three-side{
+    width:          28%;
+    display:        inline-block;
+}
+
+/*footer ONLY*/
+#Footer h3{
+    padding-bottom: 5px;
+    text-decoration: underline;
+}
+
+#Footer .three-side{
+    text-align:     center;
+    font-size:      1.5em;
+}
+
+#Footer .three-side a{
+    color:          #531F01;
+    display:        block;
+    text-decoration: none;
+    margin-top:     10px;
+    padding-bottom: 5px;
+    transition:     0.3s;
+}
+
+#Footer .three-side a:hover{
+    letter-spacing: 4px;
+    color:          #947A38;
+}
+
+.three-center{
+    width:          40%;
+    display:        inline-block;
+}
+
+.three-center img{
+    width:          100%;
+    margin-top:     -150px;
+}
+
+/*follow us*/
+#followUs{
+    position:       relative;
+    bottom:         120px;
+}
+
+/*contact us*/
+#contactUs{
+    position:       relative;
+    bottom:         30px;
+}
+
+#Footer .three-side textarea, #Footer .three-side input{
+    resize:             none;
+	width:				95%;
+	font-size:			0.8em;
+	border-radius:		10px;
+    padding:            5px;
+    margin-bottom:      10px;
+}
+
+/* ---------------------- ADDITIONAL ---------------------- */
+#backgroundDiv{
+    background-image: url('../media/foot_back.jpg');
+	background-repeat: 	no-repeat;
+	background-size:	cover;
+	background-attachment: 	fixed;
+}
+.screen80Percent{
+    width: 80%;
+    margin-left: 10%;
+}
+
+footer p{
+    border-top: 2px solid #947A38;
+    padding: 2vh 0;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+@media screen and (max-width: 600px) {
+    /*NAV BAR*/
+    #navBar a:not(:first-child){
+        display: none;
+    }
+    
+    #navBar a.icon {
+        float: 				right;
+        border-bottom:      none;
+        margin-top:         15px;
+        display: 			inline-block;
+        position:			relative;
+        bottom:				25%;
+    }
+
+    /*PARALLAX*/
+    #paraCloudsR, #paraCloudsL{
+        display:            none;
+    }
+
+    /*ABOUT US*/
+    .seventy{
+        width:              100%;
+        display:            block;
+    }
+    
+    .thirty{
+        width:              100%;
+        display:            block;
+    }
+
+    .halfDiv{
+        width:              100%;
+        display:            block;
+    }
+
+    #shareUs img{
+        width:              70%;
+        padding-left:       15%;
+        overflow:           hidden;
+        margin-bottom:      50px;
+    }
+
+    #shareUs{
+        padding:            5vh 0 5vh 0;
+    }
+
+    .three-side{
+        width:          100%;
+        display:        block;
+    }
+
+    #Footer{
+        height:         105vh;
+    }
+
+    #Footer .three-side{
+        text-align:     center;
+        font-size:      1.2em;
+    }
+
+    #Footer .three-side a{
+        margin-right:   15px;
+        display:        inline-block;
+    }
+
+    .three-center{
+        width:          100%;
+        display:        block;
+    }
+    
+    .three-center img{
+        width:          100%;
+        margin-top:     0;
+    }
+
+    #followUs, #contactUs{
+        bottom:         0;
+    }
+}
+
+@keyframes leftCloudAnimation {
+    from {left: -45%;}
+    to {left: 100%;
+        top: -10%}
+  }
+
+  @keyframes rightCloudAnimation {
+    from {left: -48%;}
+    to {left: 100%;
+        opacity: 0.8;}
+  }
+
+.nightMode{
+    background-color: 	#001517;
+    color: 				#0cad93;
+}
+
+.nightNav{
+    background-color:   rgba(255, 255, 255, 0.15);
+}
+
+.nightNav a{
+	color:              white;
+    border-bottom:      1px solid white;
+}
+
+.nightNav a:hover{
+    color:              #0cad93;
+    border-bottom:      8px solid#0cad93;
+}
+
+.nightShare{
+    background-color: 	#0015173b;
+    color: 				#0cad93;
+}
+
+.nightFooter{
+    background-color: 	#001517a2;
+    color: 				#0cad93;
+}
+
+#Footer .nightLinks a{
+    color:          #947A38;
+}
+
+#Footer .nightLinks a:hover{
+    color:          white;
+}

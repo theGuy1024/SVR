@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Cattles</title>
+    <link rel="stylesheet" href="config/styles.css">
+    <link rel="stylesheet" href="config/imageStyles.css">
+</head>
+<body onload="loadCattleSettings()">
+    <div id="bodyContent">
+        <nav id="navBar">
+            <img class="smallimg" src="media/SVR-logo.png"><a href="gallery.html">Gallery</a><a href="history.html">History</a><a href="cattle.html" class="activeTab">Cattles</a><a href="index.html">Home</a><a href="javascript:void(0);" class="icon" onclick="openNav()"><img id="hiddenMenu" src="media/light-more.png"></a>          
+        </nav>
+        <header id="headerClipPath">
+            <div class="left"><img src="media/cattleIntro.png"></div><div class="right"><h2 id="insideHeader">Meet our Cattles:</h2><div class="smallContainer"><h2>Show / Filter by:</h2><button class="btn activebtn"  onclick="filter('all', this)">All</button><button class="btn"  onclick="filter('current', this)">Current</button><button class="btn"  onclick="filter('bull', this)">Bulls</button><button class="btn"  onclick="filter('cow', this)">Cows</button><button class="btn"  onclick="showNoBabies(this)">Babies</button></div></div>
+        </header>
+        <div class="cattleHeaderSpacer"></div>
+        <div class="gallery">
+            <h3>Results: <span id="resultAmount">7</span></h3>
+            <img class="imageContainer current cow"     onclick="popupImg(this, 'cattles');" src="media/Gallery/luna1.png" alt="Meet Luna, the our youngest member at the ranch! She is only xmonths old, she was only x weeks old when we first got her">
+            <img class="imageContainer current bull"    onclick="popupImg(this, 'cattles');" src="media/Gallery/perro.png" alt="This is perro(dog), he's named like that since the used to sound like a dog when we first got him🐕! He is the predominante bull in the field">
+            <img class="imageContainer bull"            onclick="popupImg(this, 'cattles');" src="media/Gallery/pott.png" alt="This used to be one of the best bulls in our fields, but was sold out to the market">
+            <img class="imageContainer bull"            onclick="popupImg(this, 'cattles');" src="media/Gallery/chickitin.png" alt="Chikitin(small one), Jersey breed, he was sold since the other bull used to push him, which could've gotten him hurt.">
+            <img class="imageContainer current cow"     onclick="popupImg(this, 'cattles');" src="media/Gallery/negra.png" alt="This is one of the two cattles that we started with, the first cow that started our ranch! She's of Swissboo breed!">
+            <img class="imageContainer bull"            onclick="popupImg(this, 'cattles');" src="media/Gallery/negro.png" alt="This is our first bull we obtained, he's one of the two cattles that we started with. He's a mixture with Brangus breed.">
+            <img class="imageContainer current cow"     onclick="popupImg(this, 'cattles');" src="media/Gallery/godzilla.png" alt="Meet Godzilla, she's named like that since she used to scream like Godzilla when we first got her! She used to be rebelious, not so much right now! 🙂">
+            <div class="noNewBabies" id="noNewBabiesBox">
+                <p>Baby on the Way!</p>
+                <p><span id="cdDay">0</span> days<span id="cdHrs">0</span> hours<span id="cdMins">0</span> minutes<span id="cdSecs">0</span> seconds</p>
+                <p>No babies at the moment, but there's one on the way</p>
+            </div>
+        </div><footer><p>~~1024 Design~~</p></footer></div></div>
+    <div class="imagePopUp" id="popup"><a href="javascript:void(0)" class="closebtn" onclick="closePopup()">&times;</a><img class="popup-image" id="cattleImage"><div class="right"><h2 id="funFactTitle"></h2><p id="funFactPara"></p></div></div>
+    <div id="fullNav" class="overlay"><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a><div class="overlay-content"><img class="smallimg" src="media/SVR-logo.png" width="100"><a href="index.html">Home</a><a href="cattle.html" class="activeTab">Cattles</a><a href="gallery.html">Gallery</a><a href="history.html">History</a></div>
+    </div>
+</body>
+<script src="config/mainConfig.js"></script>
+</html> 
